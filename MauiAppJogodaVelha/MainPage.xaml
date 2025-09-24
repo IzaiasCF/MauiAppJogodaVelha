@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="MauiAppJogodaVelha.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False">  <!--Remove o título da página-->
 
     <ContentPage.Background>
 
@@ -12,15 +13,45 @@
         </LinearGradientBrush>
 
     </ContentPage.Background>
+
+    <!--Estilo da Página - BOTÕES-->
+    <ContentPage.Resources>
+        <!--Estilo dos botões como no CSS-->
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="CornerRadius" Value="15" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="80" />
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="BorderColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
     
-    <!-- GRID [ ROWDEFINITIONS: 03 linhas são 03 asteriscos / COLUMNDEFITIONS: 03 COLUNAS SÃO 03 ASTERISCOS -->
-    <Grid RowDefinitions="*, *, *" ColumnDefinitions="*, *, *">
+    <!-- GRID [ ROWDEFINITIONS: 03 linhas são 03 asteriscos / COLUMNDEFITIONS: 03 COLUNAS SÃO 03 ASTERISCOS ] -->
+    <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="*, *, *"          
+          ColumnSpacing="10"       
+          RowSpacing="10"
+          Margin="10">
+          <!-- MARGIN: espaçamento das margens do dispositivo / ROWSPACING: espaçamanto entre linhas / COLUMNSPACING: espaçamento entre as       colunas -->
 
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Jogo da Velha" />
-
-        <Button Grid.Row="1" Grid.Column="0" />
-        <Button Grid.Row="1" Grid.Column="1" />
-        <Button Grid.Row="1" Grid.Column="2" />
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10" 
+               Text="Jogo da Velha"
+               FontSize="Medium"
+               FontAttributes="Bold"
+               TextColor="DarkBlue" />
+        
+        <!--Linha 01 + 03 colunas-->
+        <Button Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button Grid.Row="1" Grid.Column="2" Clicked="Button_Clicked" />
+        <!--Linha 02 + 03 colunas-->
+        <Button Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button Grid.Row="2" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button Grid.Row="2" Grid.Column="2" Clicked="Button_Clicked" />
+        <!--Linha 03 + 03 colunas-->
+        <Button Grid.Row="3" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button Grid.Row="3" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button Grid.Row="3" Grid.Column="2" Clicked="Button_Clicked" />
 
     </Grid>
 
