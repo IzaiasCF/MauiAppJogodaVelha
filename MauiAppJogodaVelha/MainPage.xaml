@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiAppJogodaVelha.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage.Background>
+
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Offset="0.3" Color="Purple" />
+            <GradientStop Offset="1.1" Color="Red" />
+        </LinearGradientBrush>
+
+    </ContentPage.Background>
+    
+    <!-- GRID [ ROWDEFINITIONS: 03 linhas são 03 asteriscos / COLUMNDEFITIONS: 03 COLUNAS SÃO 03 ASTERISCOS -->
+    <Grid RowDefinitions="*, *, *" ColumnDefinitions="*, *, *">
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Jogo da Velha" />
+
+        <Button Grid.Row="1" Grid.Column="0" />
+        <Button Grid.Row="1" Grid.Column="1" />
+        <Button Grid.Row="1" Grid.Column="2" />
+
+    </Grid>
+
+</ContentPage>
