@@ -41,9 +41,9 @@
                TextColor="DarkBlue" />
         
         <!--Linha 01 + 03 colunas-->
-        <Button Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked" />
-        <Button Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked" />
-        <Button Grid.Row="1" Grid.Column="2" Clicked="Button_Clicked" />
+        <Button x:Name="btn10" Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked" />
+        <Button x:Name="btn11" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked" />
+        <Button x:Name="btn12" Grid.Row="1" Grid.Column="2" Clicked="Button_Clicked" />
         <!--Linha 02 + 03 colunas-->
         <Button Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked" />
         <Button Grid.Row="2" Grid.Column="1" Clicked="Button_Clicked" />
